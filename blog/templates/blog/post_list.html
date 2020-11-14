@@ -1,18 +1,19 @@
-<html>
-<head>
-	<title>study</title>
-</head>
-<body>
-	<div>
-    	<h1><a href="/">Django Girls Blog</a></h1>
-	</div>
+{% extends 'blog/base.html' %}
 
-	{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+{% block content %}
+    <div id="left">
+    	<menu-left>해킹 메일</menu-left>
+    	<menu-left>스미싱</menu-left>
     </div>
-	{% endfor %}
-</body>
-</html>
+    <div id="content">
+    	<box-board>
+    		<title>공지 사항</title>
+    	</box-board>
+    	<box-board>
+    		<title>Q/A</title>
+    	</box-board>
+    	<result-trainning>
+    		<title>훈련결과</title>
+    	</result-trainning>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Study blog</title>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+    <div id="page-header">
+        <menu_top>훈련 등록</menu_top>
+        <menu_top>훈련 결과</menu_top>
+        <menu_top>환경 설정</menu_top>
+    </div>
+    <div id="page-body">
+        {% block content %}
+        {% endblock %}        
+    </div>
+</body>
+</html>
